@@ -1,5 +1,5 @@
 === Simple Admin Branding ===
-Contributors: PorterAI
+Contributors: jbouganim
 Tags: custom login, login, admin branding, login branding, customizer
 Requires at least: 4.3
 Tested up to: 5.8
