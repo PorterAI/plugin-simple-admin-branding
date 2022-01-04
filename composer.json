@@ -1,0 +1,13 @@
+{
+    "name": "porterai/plugin-simple-admin-branding",
+    "description": "Lightweight plugin to brand the WordPress login page using the built-in site icon assets.",
+    "type": "plugin",
+    "license": "gpl2",
+    "authors": [
+        {
+            "name": "Jonathan Bouganim",
+            "email": "jb@86inc.co"
+        }
+    ],
+    "require": {}
+}
