@@ -13,39 +13,23 @@ Lightweight plugin to brand the WordPress login page using the built-in site ico
 
 == Description ==
 
-Lightweight plugin to brand the WordPress login page using the built-in site icon assets.
+* Uses site logo set in the customizer available from WordPress core, works without any setup.
+* Option to set custom logo, just for the login page.
+* Option to set header and footer text, background and text colors.
 
 == FAQ ==
 
-= Why does WordFence (and other WAF's) flag this file as a vulnerability?
+= Where are the settings to customize the login page?
 
-The file `/wp-toolbelt/modules/spam-blocker/blocklist.txt` is used by the spam blocker to check comments for spam phrases. It is regularly updated.
+From the WordPress Admin, goto Appearance > Customizer > Simple Admin Branding.
 
-As such it contains lots of spammy words, and constantly changes. Both things that could trigger a vulnerability warning.
+= Can I contribute/report an issue/request a feature? =
 
-The best thing to do is mark this file (and only this file) as 'Ignore Always'. This will stop you from getting warnings for this one file whilst monitoring the rest of the plugin for suspicious changes.
-
-= Why one plugin and not separate plugins? =
-
-I am making this because it's something I want to use. I like the simplicity of installing Jetpack and letting it do it's thing. But Jetpack is not designed for speed or elegance, so I am trying to address that with my own plugin.
-
-I am making the plugin as developer friendly as I can. Things can be tweaked using WordPress filters, and I will add more of these as I go.
-
-= Do you have any documentation? =
-
-The [docs are on Github](https://github.com/BinaryMoon/wp-toolbelt/wiki). They are a constant work in progress.
-
-= Can I contribute/ report a problem? =
-
-Yes please! You can [submit issues](https://github.com/BinaryMoon/wp-toolbelt/issues) on Github or add questions to the support forum. I'd be happy to accept pull requests as well.
-
-= What features will you add next? =
-
-I don't know. I'm open to suggestions (ping me on [Twitter](https://twitter.com/binarymoon)), but mostly I'll add things as I need them.
+Yes. You can [submit issues](https://github.com/PorterAI/plugin-simple-admin-branding/issues) on Github or add questions to the support forum. Happy to accept pull requests as well.
 
 == Installation ==
 
-1. Install and activate the plugin through the plugins page.
+1. Install and activate the plugin through the plugins page, or upload the zip file in WordPress Admin > Plugins > Add New.
 2. From WordPress Admin, goto Appearance > Customizer > Simple Admin Branding.
 
 == Changelog ==
