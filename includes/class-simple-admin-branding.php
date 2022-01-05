@@ -75,13 +75,15 @@ class Branding {
 		$wp_customize->add_setting(
 			'simple_wplogin_bg_color', 
 			array(
-				'default' => '#f1f1f1', 
+				'default' => '#f1f1f1',
+				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
 		$wp_customize->add_setting(
 			'simple_wplogin_text_color', 
 			array(
-				'default' => '#3c434a', 
+				'default' => '#3c434a',
+				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
 		$wp_customize->add_setting( 
@@ -110,7 +112,7 @@ class Branding {
 			   $wp_customize,
 			   'simple_wplogin_bg_color',
 			   array(
-				   'label'      => __( 'Login Background Color', 'simple-admin-branding' ), 
+				   'label'      => __( 'Login Background Color', 'simple-admin-branding' ),
 				   'section'    => 'simple_wplogin_settings',
 				   'settings'   => 'simple_wplogin_bg_color',
 				   'priority'	=> 100, 
@@ -179,7 +181,7 @@ class Branding {
 	public function custom_login_message( $message = '' ) {
 		$header_option = get_option('simple_wplogin_logo_header_msg');
 		if (!empty($header_option)) {
-			$message = sprintf('<div class="login-message">%s</div>', $header_option);
+			$message = sprintf('<div class="login-message">%s</div>', wp_kses_post( $header_option) );
 		}
 		return $message;
 	}
@@ -202,7 +204,7 @@ class Branding {
 	{
 		$favicon_url = esc_url( get_site_icon_url( 32 ) );
 		if (!empty($favicon_url)) {
-			echo '<link rel="shortcut icon" href="' . $favicon_url . '" />';
+			echo '<link rel="shortcut icon" href="' . esc_url( $favicon_url ) . '" />';
 		}
 	}
 
@@ -230,18 +232,18 @@ class Branding {
 	?>
     <style type="text/css">
     	body, body.interim-login {
-    		background-color: <?php echo $bg_color ?>;
-			color: <?php echo $text_color ?>;
+    		background-color: <?php echo esc_attr( $bg_color ); ?>;
+			color: <?php echo esc_attr( $text_color ); ?>;
     	}
 		.login #nav, .login #backtoblog {
 			padding: 0 12px 0;
 		}
 		.login #nav a, .login #backtoblog a {
-			color: <?php echo $text_color ?>;
+			color: <?php echo esc_attr( $text_color ); ?>;
 			text-decoration: underline;
 		}
         #login h1 a {
-            background-image: url('<?php echo $url ?>');
+            background-image: url('<?php echo esc_url( $url ) ?>');
 			background-size: contain;
             margin-bottom: 20px;
             background-size: contain;
@@ -261,8 +263,8 @@ class Branding {
 			<?php if ( strtolower($bg_color) !== '#f1f1f1' ) : ?>
 			padding: 26px 0 34px;
 			box-shadow: none !important;
-			background-color: <?php echo $bg_color; ?>;
-			color: <?php echo $text_color; ?>;
+			background-color: <?php echo esc_attr( $bg_color ); ?>;
+			color: <?php echo esc_attr( $text_color ); ?>;
 			<?php endif; ?>	
         }
         .wp-core-ui .button-primary {
@@ -280,8 +282,8 @@ class Branding {
         .powered-by {
 			<?php if ( strtolower($bg_color) !== '#f1f1f1' ) : ?>
 			box-shadow: none !important;
-			background-color: <?php echo $bg_color; ?>;
-			color: <?php echo $text_color; ?>;
+			background-color: <?php echo esc_attr( $bg_color ); ?>;
+			color: <?php echo esc_attr( $text_color ); ?>;
 			<?php else : ?>
 			background-color: #FFF;
 			color: #000;
@@ -334,7 +336,7 @@ class Branding {
 		  <div class="container">
 		  	<div class="row">
 		      <div class="col-lg-6 col-sm-6 col-xs-12">
-		        <span id="copyright"><?php echo $footer_text ?></span>
+		        <span id="copyright"><?php echo wp_kses_post( $footer_text ) ?></span>
 		      </div>
 		    </div>  
 		  </div>
