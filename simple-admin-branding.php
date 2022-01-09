@@ -3,7 +3,7 @@
  *
  * Plugin Name:       Simple Admin Branding
  * Description:       Lightweight plugin to brand the WordPress login page using the built-in site icon assets.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            PorterAI
  * Author URI: 		  https://porterai.com
  * License:           GPL-2.0+
