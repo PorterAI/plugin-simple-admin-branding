@@ -3,15 +3,15 @@ Contributors: jbouganim
 Tags: custom login, login, admin branding, login branding, customizer
 Requires at least: 4.3
 Tested up to: 5.8
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://www.paypal.com/donate/?hosted_button_id=T96GUHGVDQ4EY
 
-Lightweight plugin to brand the WordPress login page using the built-in site icon assets.
-
 == Description ==
+
+Lightweight plugin to brand the WordPress login page using the built-in site icon assets. Just set the logo in the customizer and that's all.
 
 * Uses site logo set in the customizer available from WordPress core, works without any setup.
 * Option to set custom logo, just for the login page.
@@ -34,4 +34,5 @@ Yes. You can [submit issues](https://github.com/PorterAI/plugin-simple-admin-bra
 
 == Changelog ==
 
+= 1.0.1 - 9th January 2022 = Updated readme.txt
 = 1.0 - 3rd January 2022 =
